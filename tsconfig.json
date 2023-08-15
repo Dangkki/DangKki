@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    "experimentalDecorators": true,
+    "typeRoots": ["./node_modules/@types"],
+
+		"baseUrl": ".",
+		"paths": {
+			"@src/*": ["src/*"],
+			"@lib/*": ["lib/*"],
+		}
+  },
+  "ts-node":{
+    "compilerOptions": {
+      "module": "CommonJS",
+    },
+    "baseUrl": ".",
+		"paths": {
+			"@src/*": ["src/*"],
+			"@lib/*": ["lib/*"],
+		}
+  },
+  "include": [ "**/*.ts", "**/*.tsx", ".next/graphql/resolvers-types.ts"],
+  "exclude": ["node_modules"]
+}
